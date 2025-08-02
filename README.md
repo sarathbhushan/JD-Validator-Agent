@@ -1,33 +1,74 @@
-# 📧 Cold Mail Generator
-Cold email generator for services company using groq, langchain and streamlit. It allows users to input the URL of a company's careers page. The tool then extracts job listings from that page and generates personalized cold emails. These emails include relevant portfolio links sourced from a vector database, based on the specific job descriptions. 
+# 🤖 AI-Powered Job Application Assistant
 
-**Imagine a scenario:**
+An intelligent AI agent designed to streamline the job application process. This tool validates a given **Job Description (JD)** from a URL or text input, analyzes it against your **skills and experience**, and delivers:
 
-- Nike needs a Principal Software Engineer and is spending time and resources in the hiring process, on boarding, training etc
-- Atliq is Software Development company can provide a dedicated software development engineer to Nike. So, the business development executive (Mohan) from Atliq is going to reach out to Nike via a cold email.
+- ✅ An evaluation summary of how well your profile matches the JD  
+- 🎯 Actionable insights to **improve your CV** for better alignment  
+- 📝 A **custom-tailored cover letter** written for that specific job  
 
-![img.png](imgs/img.png)
+---
 
-## Architecture Diagram
-![img.png](imgs/architecture.png)
+## 🚀 Features
 
-## Set-up
-1. To get started we first need to get an API_KEY from here: https://console.groq.com/keys. Inside `app/.env` update the value of `GROQ_API_KEY` with the API_KEY you created. 
+- **Job Description Analysis**: Automatically extracts key requirements and skills from the job description.
+- **Skill Matching**: Compares JD requirements against your skills and project portfolio (via links or structured input).
+- **Evaluation Summary**: Offers a clear view of which areas align well and which need improvement.
+- **CV Enhancement Suggestions**: Recommends changes to improve resume relevance, including adding missing skills or reframing experience.
+- **Custom Cover Letter Generation**: Creates a personalized, professional cover letter optimized for the specific role.
 
+---
 
-2. To get started, first install the dependencies using:
-    ```commandline
-     pip install -r requirements.txt
-    ```
-   
-3. Run the streamlit app:
-   ```commandline
-   streamlit run app/main.py
-   ```
-   
+## 📥 Input Format
 
-Copyright (C) Codebasics Inc. All rights reserved.
+### 1. Job Description
 
-**Additional Terms:**
-This software is licensed under the MIT License. However, commercial use of this software is strictly prohibited without prior written permission from the author. Attribution must be given in all copies or substantial portions of the software.
-# JD-Validator-Agent
+Provide a block of text or URL containing the full job description.
+
+### 2. Skill / Experience Repository (`link_list`)
+
+Add links to:
+- Your portfolio
+- GitHub projects
+- Resume websites
+- Blogs/articles
+- Or plain-text entries describing your skills & experiences
+
+---
+
+## 📤 Output Structure
+
+- `EVALUATION SUMMARY:`  
+  A detailed comparison between the job description and your background.
+
+- `CV IMPROVEMENT SUGGESTIONS:`  
+  Actionable advice to help align your resume more closely with the job.
+
+- `COVER LETTER:`  
+  A customized, ATS-optimized cover letter tailored to the specific JD.
+
+---
+
+## 🧠 How It Works
+
+This project leverages the power of **LLMs (Large Language Models)** and prompt engineering to reason about:
+- Textual patterns in job descriptions
+- Semantic similarity between JD and skills
+- Professional language generation for communication
+
+It’s ideal for:
+- Job seekers who want personalized help with applications
+- Resume optimization workflows
+- Career coaches and AI resume tools
+
+---
+
+## 📦 Installation (Coming Soon)
+
+> Note: Currently designed to be run via Bolt.diy or integrated into LLM pipelines (e.g., LangChain, FastAPI backend)
+
+```bash
+# Clone this repository
+git clone https://github.com/your-username/JD-Validator-Agent.git
+
+# Navigate to the folder
+cd JD-Validator-Agent
