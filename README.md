@@ -68,7 +68,7 @@ It’s ideal for:
 
 ```bash
 # Clone this repository
-git clone https://github.com/your-username/JD-Validator-Agent.git
+git clone https://github.com/sarathbhushan/JD-Validator-Agent.git
 
 # Navigate to the folder
 cd JD-Validator-Agent
